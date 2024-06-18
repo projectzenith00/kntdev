@@ -1,0 +1,106 @@
+.header-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.home-photo {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: calc(100% - 36px);
+    border-radius: 1000px;
+    overflow: hidden;
+    background-color: #444;
+    border: 18px solid #444;
+    -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.8);
+}
+
+.home-photo .hp-inner {
+    /*    background-position: calc(50% + 7.22136px) calc(50% + 3.76185px); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: -18px;
+    bottom: -18px;
+    width: auto;
+    left: -18px;
+    right: -18px;
+    transition: background-position 0.5s ease;
+}
+
+.home-photo .hp-inner:hover {
+    background-position: calc(50% + 7.22136px) calc(50% + 3.76185px);
+}
+
+/* .home-photo .hp-inner:hover{
+        animation: profile-image 8s;
+        animation-timing-function: ease;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+} 
+@keyframes profile-image {
+  0%   {background-position: center;}
+  25%  {background-position: calc(50% + 7.22136px) calc(50% + 3.76185px);}
+  75%  {background-position: calc(50% + 6.69505px) calc(50% + 4.70993px);}
+  100% {background-position: center;}
+}
+ */
+
+.wrapper {
+    width: auto;
+    display: flex;
+}
+
+.effect-wrapper {
+    font-weight: normal;
+}
+
+#typed {
+    font-weight: bold;
+    color: #cf000f;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: #cf000f;
+    animation: blinker 800ms infinite;
+}
+
+.cursor.typing-true {
+    animation: none;
+}
+
+@keyframes blinker {
+    0% {
+        background-color: #cf000f;
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #cf000f;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-row {
+        justify-content: center;
+    }
+    .home-photo {
+        margin-bottom: 3rem;
+    }
+}
